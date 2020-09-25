@@ -4,6 +4,7 @@ from ..items import AmazonscrapeItem
 
 class AmazonSpiderSpider(scrapy.Spider):
     name = 'amazon'
+    page_number = 2
     start_urls = [
         'https://www.amazon.in/s?k=books&rh=n%3A976389031%2Cp_n_publication_date%3A2684819031&dc&qid=1601041042&rnid=2684818031&ref=sr_nr_p_n_publication_date_1'
     ]
@@ -22,4 +23,10 @@ class AmazonSpiderSpider(scrapy.Spider):
         items['product_imagelink'] = product_imagelink
 
         yield items
+        
+        next_page='https://www.amazon.in/s?k=books&i=stripbooks&rh=n%3A976389031%2Cp_n_publication_date%3A2684819031&dc&page='+ str(AmazonSpiderSpider.page_number) +'&qid=1601055605&rnid=2684818031&ref=sr_pg_2'
+        if AmazonSpiderSpider.page_number <= 75:
+        AmazonSpiderSpider.page_number += 1
+        yield response.follow(next_page,callback=self.parse)
+        
 
