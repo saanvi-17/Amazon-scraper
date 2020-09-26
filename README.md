@@ -4,9 +4,9 @@
     </p>
     <p> we have scraped 75 pages of books collection from amazon.com 
   </p>
-  
-  ![image](https://user-images.githubusercontent.com/62648110/94331255-a1301580-ffe8-11ea-8957-df6098234fd8.png)
-  
+ 
+ ![image](https://user-images.githubusercontent.com/62648110/94331454-13edc080-ffea-11ea-81f1-5e274a6693c6.png)
+ 
 # Steps involved
 1. Install the given python libraries.
 - pip install Scrapy
