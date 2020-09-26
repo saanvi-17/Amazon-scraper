@@ -2,7 +2,11 @@
 <p> Web scraping helps in automating data extraction from websites. 
   In this project we have created a web scraper for extracting pages from amazon using Scrapy in PyCharm.
     </p>
-    
+    <p> we have scraped 75 pages of books from amazon.com 
+  </p>
+  
+  ![image](https://user-images.githubusercontent.com/62648110/94331255-a1301580-ffe8-11ea-8957-df6098234fd8.png)
+  
 # Steps involved
 1. Install the given python libraries.
 - pip install Scrapy
